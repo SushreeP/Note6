@@ -56,7 +56,17 @@ int main()
     cout << "------- -----------\n";
     for (student st : students)
     {
-        printStudent(st);
+        if (hasPassed(st))
+        {
+            printStudent(st);
+        }
+    }
+    for (student st : students)
+    {
+        if (!hasPassed(st))
+        {
+            printStudent(st);
+        }
     }
 
     // print total no of students that passed

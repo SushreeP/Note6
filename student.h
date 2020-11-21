@@ -26,7 +26,7 @@ public:
     float calcTotalMark() const;
 
 private:
-    float getMedianCwMark() const;
+    float getCwMark() const;
 };
 
 bool hasPassed(const student);

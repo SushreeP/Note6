@@ -6,7 +6,7 @@
 
 using namespace std;
 
-float median(const vector<float> v)
+float median(vector<float> v)
 {
     sort(v.begin(), v.end());
     if (v.size() % 2 == 0)
@@ -14,6 +14,17 @@ float median(const vector<float> v)
         return v[v.size() / 2];
     }
     return (v[v.size() / 2 - 1] + v[v.size() / 2]) / 2;
+}
+
+float average(vector<float> v)
+{
+    float sum = 0;
+    for (float x : v)
+    {
+        sum += x;
+    }
+
+    return (float)(sum / v.size());
 }
 
 #endif

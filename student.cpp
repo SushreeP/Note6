@@ -22,17 +22,17 @@ void student::addcwMark(float mark)
 float student::calcTotalMark() const
 {
 
-    return exam_weight * examMark + (1 - exam_weight) * getMedianCwMark();
+    return exam_weight * examMark + (1 - exam_weight) * getCwMark();
 }
 
-float student::getMedianCwMark() const
+float student::getCwMark() const
 {
 
     if (cwMarks.size() == 0)
     {
         return 0;
     }
-    return median(cwMarks);
+    return average(cwMarks);
 }
 
 bool hasPassed(const student s)

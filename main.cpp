@@ -48,29 +48,19 @@ int main()
         students.push_back(st);
     }
 
-    // arrange the student records in alphaetical order
-    sort(students.cbegin(), students.cend(), compare_names);
+    // arrange the student records in descending order of marks
+    sort(students.begin(), students.end(), [](student a, student b) { a.calcTotalMark() > b.calcTotalMark(); });
 
     // print the names and total marks
     cout << "Name\tTotal Marks\n";
     cout << "------- -----------\n";
     for (student st : students)
     {
-        if (hasPassed(st))
-        {
-            printStudent(st);
-        }
-    }
-    for (student st : students)
-    {
-        if (!hasPassed(st))
-        {
-            printStudent(st);
-        }
+        printStudent(st);
     }
 
     // print total no of students that passed
-    cout << count_if(students.cbegin(), students.cend(), hasPassed) << " students passed out of " << students.size() << " students.\n";
+    cout << count_if(students.begin(), students.end(), hasPassed) << " students passed out of " << students.size() << " students.\n";
 
     return 0;
 }

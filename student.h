@@ -34,5 +34,6 @@ bool hasPassed(const student);
 // String comparison for alphabetical ordering:
 
 bool compare_names(const student, const student);
+bool compare_marks(const student, const student);
 
 #endif

@@ -51,3 +51,8 @@ bool compare_names(const student x, const student y)
 {
     return x.getName() < y.getName();
 }
+
+bool compare_marks(const student x, const student y)
+{
+    return x.calcTotalMark() > y.calcTotalMark();
+}

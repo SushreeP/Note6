@@ -49,7 +49,7 @@ int main()
     }
 
     // arrange the student records in descending order of marks
-    sort(students.begin(), students.end(), [](student a, student b) { a.calcTotalMark() > b.calcTotalMark(); });
+    sort(students.begin(), students.end(), compare_marks);
 
     // print the names and total marks
     cout << "Name\tTotal Marks\n";

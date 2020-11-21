@@ -49,7 +49,7 @@ int main()
     }
 
     // arrange the student records in alphaetical order
-    sort(students.cbegin(), students.cend(), compare_names);
+    sort(students.begin(), students.end(), compare_names);
 
     // print the names and total marks
     cout << "Name\tTotal Marks\n";
@@ -60,7 +60,7 @@ int main()
     }
 
     // print total no of students that passed
-    cout << count_if(students.cbegin(), students.cend(), hasPassed) << " students passed out of " << students.size() << " students.\n";
+    cout << count_if(students.begin(), students.end(), hasPassed) << " students passed out of " << students.size() << " students.\n";
 
     return 0;
 }

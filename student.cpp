@@ -32,7 +32,14 @@ float student::getCwMark() const
     {
         return 0;
     }
-    return average(cwMarks);
+    else if (cwMarks.size() < 3)
+    {
+        return average(cwMarks);
+    }
+    else
+    {
+        return highest3average(cwMarks);
+    }
 }
 
 bool hasPassed(const student s)

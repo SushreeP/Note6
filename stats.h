@@ -27,4 +27,15 @@ float average(vector<float> v)
     return (float)(sum / v.size());
 }
 
+float highest3average(vector<float> v)
+{
+    sort(v.begin(), v.end());
+    float sum = 0;
+    for (int i = 0; i < 3; i++)
+    {
+        sum += v[i];
+    }
+
+    return (float)(sum / 3);
+}
 #endif
